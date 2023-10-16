@@ -10,12 +10,4 @@ services:
     environment:
       - VAR1=abc
       - VAR2=def
-    user: root 
-    command: |
-      adduser user1
-      adduser user2
-      mkdir /home/user1/pastausr1
-      mkdir /home/user2/pastausr2
-      echo "olá user1" > /home/user1/pastausr1/texto.txt
-      echo "olá user2" > /home/user2/pastausr2/texto.txt
-      chmod 777 /home/user1/pastausr1/texto.txt # Allow user2 to access user1's file
+   
