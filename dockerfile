@@ -9,6 +9,8 @@ RUN mkdir -p /home/user1/pastausr1 && \
     echo "olá user2" > /home/user2/pastausr2/texto.txt && \
     chown user1:user1 /home/user1/pastausr1/texto.txt
 
+#O comando chown é usado para alterar o proprietário e/ou grupo de um arquivo ou diretório.
+
 RUN echo "user2 ALL=(user1) NOPASSWD: /bin/cat /home/user1/pastausr1/texto.txt" >> /etc/sudoers
 
 CMD ["bash"]
